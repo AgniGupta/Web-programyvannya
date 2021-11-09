@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лекція 10. Завдання 1</title>
+    <title>Лекція 10. Завдання 2</title>
 </head>
 <body>
     <script>
-let people = {};
-
-function A() { 
-    return people; 
+function Calculator() {
+this.read = function() {
+  this.a = +prompt('a?', 0);
+  this.b = +prompt('b?', 0);
+};
+this.sum = function() {
+  return this.a + this.b;
+};
+this.mul = function() {
+  return this.a * this.b;
+};
 }
-function B() {
-     return people; 
-}
-console.log(new A() == new B());
+let calculator = new Calculator();
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());
     </script>
 </body>
 </html>
